@@ -4,8 +4,8 @@
 
 # Compiler settings - Can be customized.
 CC = g++
-CXXFLAGS = -std=c++14 -Wall $(shell pkg-config --cflags sfml-graphics sfml-window sfml-system)
-LDFLAGS = $(shell pkg-config --libs sfml-graphics sfml-window sfml-system)
+CXXFLAGS = -std=c++14 -Wall -Iinclude $(shell pkg-config --cflags sfml-graphics sfml-window sfml-system)
+LDFLAGS = $(shell pkg-config --libs sfml-graphics sfml-window sfml-system sfml-audio)
 
 # Makefile settings - Can be customized.
 APPNAME = game
