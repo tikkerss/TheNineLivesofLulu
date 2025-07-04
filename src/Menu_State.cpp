@@ -1,4 +1,4 @@
-#include "Menu.hpp"
+#include "../include/Menu_State.hpp"
 
 Menu::Menu(sf::Font& font, sf::Texture& bgTexture, sf::Vector2u windowSize) {
     background.setTexture(bgTexture);
@@ -7,28 +7,22 @@ Menu::Menu(sf::Font& font, sf::Texture& bgTexture, sf::Vector2u windowSize) {
         windowSize.y / (float)bgTexture.getSize().y
     );
 
-    title.setFont(font);
-    title.setString("The Nine Lives of Lulu");
-    title.setCharacterSize(48);
-    title.setFillColor(sf::Color::Black);
-    title.setPosition(150, 50);
-
+  
     start.setFont(font);
     start.setString("Start");
     start.setCharacterSize(36);
-    start.setFillColor(sf::Color::Black);
-    start.setPosition(350, 200);
+    start.setFillColor(sf::Color::White);
+    start.setPosition(575, 375);
 
     quit.setFont(font);
     quit.setString("Quit");
     quit.setCharacterSize(36);
-    quit.setFillColor(sf::Color::Black);
-    quit.setPosition(350, 300);
+    quit.setFillColor(sf::Color::White);
+    quit.setPosition(590, 475);
 }
 
 void Menu::draw(sf::RenderWindow& window) {
     window.draw(background);
-    window.draw(title);
     window.draw(start);
     window.draw(quit);
 }

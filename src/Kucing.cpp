@@ -1,10 +1,10 @@
-#include "Kucing.hpp"
+#include "../include/Kucing.hpp"
 
 Kucing::Kucing(float x, sf::Texture* texture) {
     sprite.setTexture(*texture);
-    sprite.setScale(40.f / texture->getSize().x, 40.f / texture->getSize().y);
-    sprite.setPosition(x, -40);
-    speed = 2.0f + static_cast<float>(std::rand() % 4);
+    sprite.setPosition(x, -60);
+    speed = 3.0f + static_cast<float>(std::rand() % 4);
+     sprite.setScale(0.3f, 0.3f);
 }
 
 void Kucing::update() {
